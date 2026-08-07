@@ -1,0 +1,229 @@
+/* src/App.css */
+:root {
+  --primary: #041994;
+  --bg-page: #62c0ff;
+  --error: #d63031;
+  --error-bg: rgba(214, 48, 49, 0.1);
+  --success: #2ecc71;
+  --success-bg: rgba(46, 204, 113, 0.1);
+  --text-main: #333333;
+  --text-muted: #666666;
+  --white: #ffffff;
+  --off-white: #fffafa;
+  --border-light: #cccccc;
+  --box-width: 650px;
+  --radius: 12px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+}
+
+/* Navbar Styling */
+.navbar {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  z-index: 1000;
+}
+
+.nav-link {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 15px;
+  transition: background 0.2s;
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+/* Layout */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 20px;
+  box-sizing: border-box;
+}
+
+.page-title {
+  color: var(--primary);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.page-subtitle {
+  color: var(--white);
+  margin-bottom: 30px;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  width: 100%;
+  max-width: var(--box-width);
+  padding: 40px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border: 4px double var(--primary);
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.card.error {
+  border-color: var(--error);
+  background-color: var(--off-white);
+}
+
+.card.success {
+  border-color: var(--success);
+  background-color: var(--off-white);
+}
+
+.card-title {
+  color: var(--primary);
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+/* Form Elements */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.label {
+  color: var(--text-muted);
+  font-weight: bold;
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--border-light);
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Buttons */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-align: center;
+}
+
+.btn.primary {
+  flex: 2;
+}
+
+.btn.secondary {
+  flex: 1;
+  background-color: var(--text-muted);
+}
+
+.btn.full-width {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.btn:disabled {
+  background-color: #999999;
+  cursor: not-allowed;
+}
+
+/* Data Display */
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.data-label {
+  color: var(--text-muted);
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.data-value {
+  text-align: right;
+  color: var(--text-main);
+  word-break: break-all;
+  margin-left: 15px;
+}
+
+.footer-info {
+  margin-top: 15px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  background: #f9f9f9;
+  padding: 10px;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+/* Status Messages */
+.status-msg {
+  padding: 10px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.status-msg.error {
+  color: var(--error);
+  background: var(--error-bg);
+}
+
+.status-msg.success {
+  color: var(--success);
+  background: var(--success-bg);
+}
+
+.status-msg.neutral {
+  color: var(--text-main);
+  background: #eeeeee;
+}
