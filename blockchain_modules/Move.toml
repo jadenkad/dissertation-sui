@@ -1,0 +1,11 @@
+[package]
+name = "blockchain_modules"
+edition = "2024"
+
+[dependencies]
+
+[addresses]
+certificate_app = "0x0"
+
+[test-addresses]
+certificate_app = "0x0"
